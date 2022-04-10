@@ -83,11 +83,12 @@ try {
 
         <table border="1" style = "border-collapse: collapse" width = "700">
         <?php ?>
-            <?php foreach ($sth as $row) {?>
+            <?php foreach ($sth as $row) 
+            {?>
                 <?php
-$zikan = explode(" ", $row['created_at']);
-    $zikan = explode(":", $zikan[1]);
-    ?>
+                    $zikan = explode(" ", $row['created_at']);
+                    $zikan = explode(":", $zikan[1]);
+                ?>
             <tr>
                 <td><?php echo $row['name']; ?></td>
                 <td><?php echo $zikan[0] . ":" . $zikan[1] ?></td>
